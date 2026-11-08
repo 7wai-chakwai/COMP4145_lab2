@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>COMP4145 PD2 Scrum Boards</title>
+<style>
+  :root { --ink:#17324d; --blue:#146b88; --paper:#f5f7fa; --line:#d5dde5; --done:#dff3e8; --blocked:#fde7e7; --todo:#fff4d6; --backlog:#edf1f5; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:Arial,Helvetica,sans-serif; color:var(--ink); background:var(--paper); }
+  .canvas { padding:12px; background:white; }
+  h1 { margin:0 0 4px; font-size:22px; }
+  .meta { margin:0 0 12px; color:#526577; font-size:10px; }
+  .board { display:grid; grid-template-columns:repeat(5,1fr); gap:5px; }
+  .column { background:#f8fafc; border:1px solid var(--line); border-radius:7px; min-height:310px; overflow:hidden; }
+  .column h2 { margin:0; padding:7px; font-size:10px; background:#eaf0f5; }
+  .column.blocked h2 { background:var(--blocked); }
+  .column.done h2 { background:var(--done); }
+  .card { margin:5px; padding:6px; border:1px solid var(--line); border-left:3px solid var(--blue); border-radius:5px; background:white; font-size:8px; line-height:1.3; }
+  .card b { display:block; margin-bottom:3px; }
+  .blocked .card { border-left-color:#c43c43; }
+  .done .card { border-left-color:#18834b; }
+  #comparison { width:460px; padding:12px; background:white; }
+  #comparison h1 { font-size:22px; }
+  .three { display:grid; grid-template-columns:1fr; gap:8px; }
+  .snapshot { border:1px solid var(--line); border-radius:7px; padding:8px; background:#fbfcfd; }
+  .snapshot h2 { margin:0 0 7px; font-size:13px; }
+  .progress { display:grid; grid-template-columns:repeat(3,1fr); gap:5px; }
+  .status { border-radius:5px; padding:6px; min-height:105px; font-size:9px; line-height:1.3; }
+  .status h3 { margin:0 0 4px; font-size:10px; }
+  .status ul { margin:0; padding-left:16px; }
+  .status.done { background:var(--done); }
+  .status.active { background:var(--todo); }
+  .status.block { background:var(--blocked); }
+</style>
+</head>
+<body>
+<section id="week2" class="canvas" style="width:460px">
+  <h1>End of Week 2 Scrum Board</h1>
+  <p class="meta">Evidence checkpoint 29 October 2026 | Done requires artifact and test evidence</p>
+  <div class="board">
+    <div class="column"><h2>Backlog</h2></div>
+    <div class="column"><h2>To Do</h2></div>
+    <div class="column"><h2>In Progress</h2></div>
+    <div class="column blocked"><h2>Blocked</h2><div class="card"><b>T13 M5</b>Streamlit Cloud deployment<br>Needs remote authorization and a verified public URL</div></div>
+    <div class="column done"><h2>Done</h2>
+      <div class="card"><b>T01 T02 T03 M1</b>Requirements, management records, final update and reflection</div>
+      <div class="card"><b>T04 T05 M2</b>Navigation and Multi-Stock Comparison</div>
+      <div class="card"><b>T06 T07 M3</b>Market data and Risk Analysis Dashboard</div>
+      <div class="card"><b>T08 T09 T10 M4</b>Feasibility, portfolio MVP and validation</div>
+      <div class="card"><b>T11 T12 M5</b>Local environment, integration tests and bug tracking</div>
+    </div>
+  </div>
+</section>
+
+<section id="comparison">
+  <h1>PD2 Scrum Progress Comparison</h1>
+  <p class="meta">Historical snapshots are preserved; Week 2 uses the task mapping in the final brief.</p>
+  <div class="three">
+    <div class="snapshot"><h2>Before Week 1 Planned</h2><div class="progress">
+      <div class="status active"><h3>To Do</h3><ul><li>T01 T02</li><li>T04 T05</li><li>T06 T07</li><li>T08 T11</li></ul></div>
+      <div class="status"><h3>Backlog</h3><ul><li>T03</li><li>T09 T10</li><li>T12 T13</li></ul></div>
+      <div class="status done"><h3>Done</h3><ul><li>None</li></ul></div>
+    </div></div>
+    <div class="snapshot"><h2>End of Week 1 Actual</h2><div class="progress">
+      <div class="status done"><h3>Done</h3><ul><li>T01 T02</li><li>T04 T05</li><li>T06 T07</li><li>T08 T11</li></ul></div>
+      <div class="status active"><h3>Remaining</h3><ul><li>T03</li><li>T09 T10</li><li>T12 T13</li></ul></div>
+      <div class="status block"><h3>Blocked</h3><ul><li>None</li></ul></div>
+    </div></div>
+    <div class="snapshot"><h2>End of Week 2 Actual</h2><div class="progress">
+      <div class="status done"><h3>Done</h3><ul><li>T01-T12 except T13</li><li>23 tests passed</li><li>Local browser verified</li></ul></div>
+      <div class="status active"><h3>Remaining</h3><ul><li>Actual time entries</li><li>Individual feedback</li></ul></div>
+      <div class="status block"><h3>Blocked</h3><ul><li>T13 Cloud deployment</li><li>Authorization and URL required</li></ul></div>
+    </div></div>
+  </div>
+</section>
+</body>
+</html>

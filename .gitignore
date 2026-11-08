@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.baseline/
+.DS_Store
+~$*
+.streamlit/secrets.toml
+COMP4145_PD2_Submission/
+COMP4145_PD2_Submission.zip
+*.docx
+*.ipynb
+stock_data.csv

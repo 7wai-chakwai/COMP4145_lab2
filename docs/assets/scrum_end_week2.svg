@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="700" viewBox="0 0 1400 700">
+  <rect width="1400" height="700" fill="#ffffff"/>
+  <style>
+    text{font-family:Arial,Helvetica,sans-serif;fill:#17324d}.title{font-size:42px;font-weight:700}.meta{font-size:19px;fill:#526577}.head{font-size:21px;font-weight:700}.cardh{font-size:15px;font-weight:700}.body{font-size:14px}
+  </style>
+  <text x="42" y="62" class="title">End of Week 2 Scrum Board</text>
+  <text x="42" y="96" class="meta">Evidence checkpoint 29 October 2026 | Done requires artifact and test evidence</text>
+  <g transform="translate(42 130)">
+    <g><rect width="250" height="520" rx="12" fill="#f8fafc" stroke="#d5dde5"/><rect width="250" height="58" rx="12" fill="#eaf0f5"/><text x="18" y="37" class="head">Backlog</text></g>
+    <g transform="translate(266 0)"><rect width="250" height="520" rx="12" fill="#f8fafc" stroke="#d5dde5"/><rect width="250" height="58" rx="12" fill="#eaf0f5"/><text x="18" y="37" class="head">To Do</text></g>
+    <g transform="translate(532 0)"><rect width="250" height="520" rx="12" fill="#f8fafc" stroke="#d5dde5"/><rect width="250" height="58" rx="12" fill="#eaf0f5"/><text x="18" y="37" class="head">In Progress</text></g>
+    <g transform="translate(798 0)"><rect width="250" height="520" rx="12" fill="#f8fafc" stroke="#d5dde5"/><rect width="250" height="58" rx="12" fill="#fde7e7"/><text x="18" y="37" class="head">Blocked</text><rect x="14" y="76" width="222" height="150" rx="8" fill="#fff" stroke="#d5dde5"/><rect x="14" y="76" width="6" height="150" rx="3" fill="#d04348"/><text x="32" y="102" class="cardh">T13 M5</text><text x="32" y="128" class="body"><tspan x="32" dy="0">Streamlit Cloud deployment</tspan><tspan x="32" dy="22">Remote authorization and a</tspan><tspan x="32" dy="22">verified public URL required</tspan></text></g>
+    <g transform="translate(1064 0)"><rect width="250" height="520" rx="12" fill="#f8fafc" stroke="#d5dde5"/><rect width="250" height="58" rx="12" fill="#dff3e8"/><text x="18" y="37" class="head">Done</text>
+      <g transform="translate(14 76)"><rect width="222" height="78" rx="8" fill="#fff" stroke="#d5dde5"/><rect width="6" height="78" rx="3" fill="#18834b"/><text x="18" y="24" class="cardh">T01 T02 T03 M1</text><text x="18" y="48" class="body">Requirements and final records</text></g>
+      <g transform="translate(14 165)"><rect width="222" height="78" rx="8" fill="#fff" stroke="#d5dde5"/><rect width="6" height="78" rx="3" fill="#18834b"/><text x="18" y="24" class="cardh">T04 T05 M2</text><text x="18" y="48" class="body">Navigation and comparison</text></g>
+      <g transform="translate(14 254)"><rect width="222" height="78" rx="8" fill="#fff" stroke="#d5dde5"/><rect width="6" height="78" rx="3" fill="#18834b"/><text x="18" y="24" class="cardh">T06 T07 M3</text><text x="18" y="48" class="body">Market data and risk dashboard</text></g>
+      <g transform="translate(14 343)"><rect width="222" height="78" rx="8" fill="#fff" stroke="#d5dde5"/><rect width="6" height="78" rx="3" fill="#18834b"/><text x="18" y="24" class="cardh">T08 T09 T10 M4</text><text x="18" y="48" class="body">Feasibility, MVP and validation</text></g>
+      <g transform="translate(14 432)"><rect width="222" height="72" rx="8" fill="#fff" stroke="#d5dde5"/><rect width="6" height="72" rx="3" fill="#18834b"/><text x="18" y="24" class="cardh">T11 T12 M5</text><text x="18" y="48" class="body">Environment and integration</text></g>
+    </g>
+  </g>
+</svg>

@@ -2,6 +2,8 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
+from pd2_dashboard import analytics_inputs, comparison_dashboard, risk_dashboard
+from portfolio_dashboard import portfolio_dashboard
 from trading_strategy import (
     calculate_moving_averages,
     get_stock_data,
@@ -10,7 +12,7 @@ from trading_strategy import (
 )
 
 
-st.set_page_config(page_title="MSFT | Golden Cross", page_icon=":chart_with_upwards_trend:", layout="wide")
+st.set_page_config(page_title="Stock Trading Analytics Platform", page_icon=":chart_with_upwards_trend:", layout="wide")
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
@@ -112,7 +114,30 @@ def detailed_trades(trades):
     st.caption(f"{len(filtered)} of {len(trades)} trades")
 
 
-st.title("Microsoft / MSFT")
+st.title("Stock Trading Analytics Platform")
+st.caption("Historical analytics only. Past performance does not predict future results; this is not investment advice.")
+section = st.sidebar.radio(
+    "Dashboard", [
+        "Stock Trading Strategy", "Multi-Stock Comparison", "Risk Analysis Dashboard",
+        "Portfolio Backtesting",
+    ],
+    key="dashboard_section",
+)
+if section != "Stock Trading Strategy":
+    st.subheader(section)
+    if section == "Portfolio Backtesting":
+        portfolio_dashboard()
+    else:
+        minimum_stocks = 2 if section == "Multi-Stock Comparison" else 1
+        analytics_prices = analytics_inputs(min_required=minimum_stocks)
+        if analytics_prices is not None:
+            if section == "Multi-Stock Comparison":
+                comparison_dashboard(analytics_prices)
+            else:
+                risk_dashboard(analytics_prices)
+    st.stop()
+
+st.subheader("Microsoft / MSFT")
 st.caption("Golden Cross  |  50 / 200 trading-day averages  |  15% target  |  60-day holding limit")
 page = st.segmented_control(
     "View", ["Price chart", "Trade statistics", "Detailed trades"],
