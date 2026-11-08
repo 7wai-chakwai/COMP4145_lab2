@@ -141,26 +141,27 @@ limitations. Live values can change when Yahoo revises adjusted history.
 - [Final project update](docs/final_project_update.md) and
 	[project reflection](docs/project_reflection.md)
 - [Feature 4 implementation and test results](docs/feature4_update.md)
+- [Post-snapshot Streamlit deployment verification](docs/deployment_update.md)
 - [Real coding-time log](docs/coding_time_log.csv)
 - [Week 2 submission status](docs/week2_submission.md)
 
 Baseline commit: `c40801b`. Recovery instructions and both archive checksums are
 in the architecture record. The current Git client is unavailable because the
-local Apple Command Line Tools path is missing; no reset, commit, push or remote
-deployment was performed. Repair the toolchain before staging project files.
+local Apple Command Line Tools path is missing. The verified PD2 changes were
+committed with Dulwich and pushed through authenticated GitHub CLI as commit
+`3471d57`; no reset or checkout was performed.
 
 ## Deployment Status
 
 Local compilation, clean installation, package consistency, Streamlit health,
-desktop/mobile browser flows, requirements review and source-secret search passed. Streamlit Community
-Cloud remains pending because remote actions require explicit authorization.
-After authorization: repair Git, review/stage the intended files, push to the
-existing repository, select `app.py` as the Streamlit entry point with Python
-3.13, deploy, then repeat the four-page navigation and invalid-input smoke tests
-on the public URL. Do not add a secrets file; the application uses no credentials.
+desktop/mobile browser flows, requirements review and source-secret search passed.
+The existing Streamlit Community Cloud app was redeployed from repository
+`7wai-chakwai/COMP4145_lab2`, branch `main`, entry point `app.py`. Production
+smoke tests verified all four dashboards, shared watchlist persistence, custom
+JPM selection, charts, metrics and portfolio tables without an app exception.
 
-**Public deployed application URL:** pending authorization and verification.
-Localhost is not a public deployment.
+**Public deployed application URL:**
+https://comp4145lab2-p38vam3wevyhkpmrafap8u.streamlit.app/
 
 No elapsed coding time is claimed. Team members must fill actual start/end times
 and enforce the assignment's **less than 180 minutes total** vibe-coding limit.

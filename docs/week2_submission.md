@@ -1,8 +1,8 @@
 # Week 2 Submission Status
 
-Updated 2026-10-29. The application, validation, integration, management records,
-final report and local submission package are complete. Remote deployment, a
-public URL, actual time entries and individual team feedback remain pending.
+Updated 2026-11-09. The application, validation, integration, management records,
+final report, submission package and post-snapshot remote deployment are complete.
+Actual time entries and individual team feedback remain pending.
 
 ## Final Project Update T03
 
@@ -13,8 +13,8 @@ blocked remote deployment. Assigned owner remains M1.
 ## End of Week 2 Scrum Snapshot
 
 See `scrum_end_week2.md` and the exported board images. T09, T10 and T12 meet
-their verified gates. T13 is Blocked because remote deployment was not authorized.
-Both Week 1 Markdown snapshots are preserved.
+their verified gates. T13 was Blocked at that historical checkpoint; deployment
+was authorized and completed on 2026-11-09 without rewriting the snapshot.
 
 ## Project Reflection
 
@@ -30,9 +30,12 @@ The project cannot certify the **less than 180 minutes** limit without that data
 
 ## Deployment T13
 
-Actual public application URL: **pending authorization, deployment and verification**.
-Local `http://localhost:8501` passed browser and health checks but is not a public
-deployment. Required manual steps are in the README.
+Actual public application URL:
+**https://comp4145lab2-p38vam3wevyhkpmrafap8u.streamlit.app/**
+
+The existing app was redeployed from GitHub `main` commit `3471d57`, using
+`app.py`. Public smoke tests verified strategy, comparison, risk, portfolio, and
+custom JPM watchlist selection. See `deployment_update.md`.
 
 ## Final Report
 
